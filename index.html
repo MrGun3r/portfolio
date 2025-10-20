@@ -12,30 +12,43 @@
     <div id="topSection">
        <button onclick="changePage(0)">Home</button>
        <button onclick="changePage(1)">About me</button>
-       <button>Projects</button>
-       <button>Education</button>
-       <button>Experience</button>
+       <button onclick="changePage(2)">Projects</button>
+       <button onclick="changePage(3)">Education</button>
+       <button onclick="changePage(4)">Experience</button>
     </div>
+    
     <div id="info">
+        
        <div class="infoBox" id="home">
-       <h1>
+        <h1>
         Hello, I am Taha Baantar 
        </h1> 
        <p>
         I am a software developer and a current INP-ENSEEIHT engineering student
        </p>
-       <p>
-        You can find me in:
-       </p>
+       
+       <div id="socials">
+        
+        <a href="https://linkedin.com" class="socials_button" id="linkedin">
+          <img src="linkedin-svgrepo-com.png">
+        </a>
+        <a href="https://github.com" class="socials_button" id="linkedin">
+          <img src="github-mark.png">
+        </a>
+        <a href="https://gmail.com" class="socials_button" id="linkedin">
+          <img src="email.png">
+        </a>
        </div>
-
+       
+       </div>
        <div class="infoBox" id="about_me">
          <h1>
            About Me
          </h1>
          <p id="about_me_text">
            Hey, My name is Taha Baantar, I am a software developer and a video game enthusiast, I've always wanted to make useful software programs. <br>
-           Throughout my career , I've made many personal projects using different languages like C, JavaScript, Python and such.
+           Throughout my career , I've made many personal projects using different languages like C, JavaScript, Python and such. <br>
+           I am currently studying in INP-ENSEEIHT in Toulouse in the Numerical sciences branch to become an engineer. <br>
          </p>
        </div>
     </div>

@@ -49,6 +49,7 @@ button:hover{
 
 #info{
     color:white;
+    
     width:100%;
     height:100%;
     display:flex;
@@ -60,20 +61,59 @@ button:hover{
     flex-direction: column;
     text-shadow:2px 2px 5px black;
     
+    
+    
+}
+
+a,button{
+    cursor: pointer;
+    z-index:5;
 }
 #home{
+    
     opacity: 0;
     text-align:center;
     top:0px;
-    height:100%;
+    height:70%;
+    display:flex;
+    line-height:1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width:100%;
     transition: opacity 0.5s ease;
+    
 }
 #home.fade-in{
     opacity: 1;
 }
+#socials{
+    z-index: 2;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+}
+.socials_button{
+    
+    width:40px;
+    height:40px;
+    transition: 0.1s ease;
+    background-color: transparent;
+    
+}
+
+.socials_button img{
+    width:40px;
+    height:40px;
+}
+
+.socials_button:hover{
+    filter: drop-shadow(4px 2px 1px #5b5b5b);
+}
 
 .infoBox{
+    z-index: 0;
     position:absolute;
     top:0px;
 }
@@ -82,6 +122,7 @@ button:hover{
     width:100%;
     height:100%;
     opacity: 0;
+    line-height:2rem;
     position:relative;
     transition: opacity 0.5s ease;
 }

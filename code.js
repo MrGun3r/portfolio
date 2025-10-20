@@ -20,7 +20,7 @@ function fadeoutEverything(){
 
 /* Button Transitioning */
 function changePage(i){
-    fadeoutEverything();
+   fadeoutEverything();
    if(i == 0){doc_home.classList.add("fade-in");}
    if(i == 1){doc_aboutMe.classList.add("fade-in");}
 }
