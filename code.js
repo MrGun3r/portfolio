@@ -6,18 +6,24 @@ canvas.height = window.innerHeight;
 
 
 const doc_home = document.getElementById("home");
+const doc_aboutMe = document.getElementById("about_me");
+
+
+doc_home.classList.add("fade-in");
+
+
+function fadeoutEverything(){
+    doc_home.classList.remove("fade-in");
+    doc_aboutMe.classList.remove("fade-in");
+}
 
 
 /* Button Transitioning */
 function changePage(i){
-   if(i == 0){doc_home.classList.remove("fade-out");}
-   if(i == 1){doc_home.classList.add("fade-out");}
+    fadeoutEverything();
+   if(i == 0){doc_home.classList.add("fade-in");}
+   if(i == 1){doc_aboutMe.classList.add("fade-in");}
 }
-
-
-
-
-
 
 
 
@@ -29,7 +35,7 @@ function resizeWindow(){
 }
 
 
-const no_dots = 35;
+const no_dots = 50;
 
 dots = [];
 
