@@ -16,34 +16,34 @@ function fadeoutEverything(){
     doc_home.classList.remove("fade-in");
     doc_aboutMe.classList.remove("fade-in");
 }
+function moveDots(){
+    for(i = 0;i<dots.length;i++){
+        dots[i].moveVelo = 20;
+    }
+}
 
 
 /* Button Transitioning */
 function changePage(i){
    fadeoutEverything();
+   moveDots();
    if(i == 0){doc_home.classList.add("fade-in");}
    if(i == 1){doc_aboutMe.classList.add("fade-in");}
 }
 
 
-
 function resizeWindow(){
-    
    canvas.width = window.innerWidth;
    canvas.height = window.innerHeight;
-
 }
 
 
 const no_dots = 50;
-
 dots = [];
-
 const mouse = {
     x:0,
     y:0
 };
-
 
 class Dot{
     constructor(x,y,angle){
@@ -52,13 +52,16 @@ class Dot{
         this.angle = angle;
         this.veloX = 0.5;
         this.veloY = 0.5;
+        this.moveVelo = 1;
     }
     init(){
        dots.push(this);
     }
     update(){
-        this.x += this.veloX*Math.cos(this.angle);
-        this.y += this.veloY*Math.sin(this.angle);
+        this.moveVelo -= (Math.abs(this.moveVelo) - 1)*0.1;
+
+        this.x += (this.moveVelo*this.veloX)*Math.cos(this.angle);
+        this.y += (this.moveVelo*this.veloY)*Math.sin(this.angle);
 
         if (this.x < 0 || this.x > canvas.width) {
             this.veloX *= -1;
