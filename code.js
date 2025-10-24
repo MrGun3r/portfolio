@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 
 const doc_home = document.getElementById("home");
-const doc_aboutMe = document.getElementById("about_me");
+const doc_EngCourse = document.getElementById("engineering_course");
 
 
 doc_home.classList.add("fade-in");
@@ -14,7 +14,7 @@ doc_home.classList.add("fade-in");
 
 function fadeoutEverything(){
     doc_home.classList.remove("fade-in");
-    doc_aboutMe.classList.remove("fade-in");
+    doc_EngCourse.classList.remove("fade-in");
 }
 function moveDots(){
     for(i = 0;i<dots.length;i++){
@@ -28,7 +28,7 @@ function changePage(i){
    fadeoutEverything();
    moveDots();
    if(i == 0){doc_home.classList.add("fade-in");}
-   if(i == 1){doc_aboutMe.classList.add("fade-in");}
+   if(i == 1){doc_EngCourse.classList.add("fade-in");}
 }
 
 

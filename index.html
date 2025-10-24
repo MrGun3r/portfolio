@@ -9,16 +9,20 @@
 </head>
 
 <body>
-    <div id="topSection">
-       <button onclick="changePage(0)">Home</button>
-       <button onclick="changePage(1)">About me</button>
-       <button onclick="changePage(2)">Projects</button>
-       <button onclick="changePage(3)">Education</button>
-       <button onclick="changePage(4)">Experience</button>
+    <div id="topSection"> 
+       <p> Taha Baantar </p>
+       <div id="topSectionButtons">
+          <button onclick="changePage(0)">Home</button>
+          <button onclick="changePage(1)">Engineering Course</button>
+          <button onclick="changePage(2)">International Mobility</button>
+          <button onclick="changePage(3)">Civic Engagement</button>
+          <button onclick="changePage(4)">Activities</button>
+          <button onclick="changePage(5)">Career Development</button>
+       </div>
+       
     </div>
     
     <div id="info">
-        
        <div class="infoBox" id="home">
         <h1>
         Hello, I am Taha Baantar 
@@ -29,28 +33,44 @@
        
        <div id="socials">
         
-        <a href="https://linkedin.com" class="socials_button" id="linkedin">
+        <a href="https://www.linkedin.com/in/taha-baantar" class="socials_button" id="linkedin">
           <img src="linkedin-svgrepo-com.png">
         </a>
-        <a href="https://github.com" class="socials_button" id="linkedin">
+        <a href="https://github.com/mrgun3r" class="socials_button" id="linkedin">
           <img src="github-mark.png">
         </a>
-        <a href="https://gmail.com" class="socials_button" id="linkedin">
+        <a href="mailto:xxxbaantartahaxxx@gmail.com" class="socials_button" id="linkedin">
           <img src="email.png">
         </a>
        </div>
        
        </div>
-       <div class="infoBox" id="about_me">
+       <div class="infoBox" id="engineering_course">
          <h1>
-           About Me
+           Engineering Course
          </h1>
-         <p id="about_me_text">
-           Hey, My name is Taha Baantar, I am a software developer and a video game enthusiast, I've always wanted to make useful software programs. <br>
-           Throughout my career , I've made many personal projects using different languages like C, JavaScript, Python and such. <br>
-           I am currently studying in INP-ENSEEIHT in Toulouse in the Numerical sciences branch to become an engineer. <br>
-         </p>
+         <div id="careerGrid">
+          <p>
+            <img src="n7.png">
+            2025 - Present : Engineering student at INP-ENSEEIHT, Toulouse
+          </p>
+          <p>
+            <img src="cpge.png">
+            2024 - 2025 : Preparatory classes MP at Lycée Ibn Timiya, Marrakesh
+          </p>
+          <p>
+            <img src="cpge.png">
+            2023 - 2024 : Preparatory classes MPSI at Lycée Ibn Timiya, Marrakesh
+          </p>
+         </div>     
        </div>
+       <div class="infoBox" id="mobility">
+        <h1>
+           International Mobility
+        </h1>
+        
+       </div>
+       
     </div>
     
     <canvas id="canvas"></canvas>

@@ -19,12 +19,23 @@ body {
 }
 
 #topSection{
+    color:white;
+    text-shadow: black;
     height: 10%;
-    width: 100%;
+    width: max-content;
     display:flex;
-    gap:2rem;
-    justify-content:center;
+    gap:3rem;
+    margin-left: 5%;
+    justify-content:left;
     align-items: center;
+}
+#topSectionButtons{
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+}
+#topSection p{
+    font-size: larger;
 }
 
 button{
@@ -56,11 +67,11 @@ button:hover{
     position:relative;
     justify-content: center;
     align-items: center;
-    padding : 5rem;
+    padding : 2.5rem;
     box-sizing: border-box;
     flex-direction: column;
     text-shadow:2px 2px 5px black;
-    
+    z-index: 0;
     
     
 }
@@ -86,6 +97,7 @@ a,button{
 }
 #home.fade-in{
     opacity: 1;
+    z-index: 1;
 }
 #socials{
     z-index: 2;
@@ -109,7 +121,7 @@ a,button{
 }
 
 .socials_button:hover{
-    filter: drop-shadow(4px 2px 1px #5b5b5b);
+    filter: drop-shadow(0px 0px 5px #c1c1c1);
 }
 
 .infoBox{
@@ -118,7 +130,7 @@ a,button{
     top:0px;
 }
 
-#about_me{
+#engineering_course{
     width:100%;
     height:100%;
     opacity: 0;
@@ -126,15 +138,35 @@ a,button{
     position:relative;
     transition: opacity 0.5s ease;
 }
-#about_me_text{
-    width:70%;
-    padding:1rem;
-}
 
-#about_me.fade-in{
+
+#engineering_course.fade-in{
     opacity: 1;
+    z-index: 1;
 }
 
+#careerGrid{
+    padding-left: 4rem;
+    padding-top: 1rem;
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+
+    
+}
+
+#careerGrid img{
+    height:4rem;
+    border-radius: 1.5rem;
+        
+}
+
+#careerGrid p{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+        
+}
 #canvas{
       position: absolute;
       top: 0;
