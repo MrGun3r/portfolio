@@ -4,6 +4,8 @@
 }
 html {
     width: 100%; height: 100%;
+    box-sizing: border-box;
+
 }
 body {
     margin: 0;
@@ -39,6 +41,13 @@ body {
 }
 
 button{
+    background-color:transparent;
+    color:white;
+    border:none;
+}
+
+
+#topSection button{
     background:linear-gradient(currentcolor 0 0)
     bottom left/var(--underline-var,0%) 10% no-repeat;
     border:none;
@@ -66,8 +75,6 @@ button:hover{
     display:flex;
     position:relative;
     justify-content: center;
-    align-items: center;
-    padding : 2.5rem;
     box-sizing: border-box;
     flex-direction: column;
     text-shadow:2px 2px 5px black;
@@ -91,7 +98,6 @@ a,button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100%;
     transition: opacity 0.5s ease;
     
 }
@@ -101,7 +107,6 @@ a,button{
 }
 #socials{
     z-index: 2;
-    width:100%;
     display:flex;
     justify-content: center;
     gap:2rem;
@@ -125,48 +130,178 @@ a,button{
 }
 
 .infoBox{
+    display:flex;
+    width:100%;
+    box-sizing: border-box;
+    padding-left:4rem;
     z-index: 0;
     position:absolute;
     top:0px;
 }
 
 #engineering_course{
-    width:100%;
+    
+    flex-direction: column;
     height:100%;
     opacity: 0;
+    width:80%;
     line-height:2rem;
-    position:relative;
     transition: opacity 0.5s ease;
 }
-
+#course_Text{
+    padding-left: 4rem;
+}
 
 #engineering_course.fade-in{
     opacity: 1;
     z-index: 1;
 }
 
-#careerGrid{
-    padding-left: 4rem;
-    padding-top: 1rem;
+#mobility{
+    width:100%;
+    height:100%;
+    opacity: 0;
+    line-height:2rem;
+    transition: opacity 0.5s ease;
+}
+
+
+#mobility.fade-in{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+#civic{
+    width:100%;
+    height:100%;
+    opacity: 0;
+    line-height:2rem;
+    transition: opacity 0.5s ease;
+}
+
+
+#civic.fade-in{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+#activities{
+    width:100%;
+    height:100%;
+    opacity: 0;
+    line-height:2rem;
+    transition: opacity 0.5s ease;
+}
+
+
+#activities.fade-in{
+    opacity: 1;
+    z-index: 1;
+}
+
+#career-dev{
+    width:100%;
+    height:100%;
+    opacity: 0;
+    line-height:2rem;
+    transition: opacity 0.5s ease;
+}
+
+
+#career-dev.fade-in{
+    opacity: 1;
+    z-index: 1;
+}
+
+#semesters{
+    margin-left: 4rem;
+    line-height:0.75rem;
+    width:100%;
+    height:55%;
+    position: relative;
     display:flex;
     flex-direction: column;
-    width:fit-content;
-
-    
-}
-
-#careerGrid img{
-    height:4rem;
-    border-radius: 1.5rem;
-        
-}
-
-#careerGrid p{
-    display:flex;
+    gap:0rem;
+    background-color: #33333346;
+    border: 2px solid #585858;
+    border-radius: 2rem;
     align-items: center;
-    gap:2rem;
-        
 }
+#semesters ul{
+    list-style-type: disc;
+    line-height:3rem;
+}
+
+
+#semesters img,#semesters button{
+    width: 2rem;
+    height: 2rem;
+    transition: 0.5s ease;
+}
+.sem{
+    opacity: 1;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    transition: 0.5s ease;
+    transform: translateX(0px);
+}
+
+
+.sem.fade-out{
+    opacity: 0;
+}
+
+.sem.translateRight{
+    transform: translateX(-70%);
+}
+
+.sem.translateLeft{
+    transform: translateX(70%);
+}
+
+
+
+
+#sem_GoLeft{
+    opacity:1;
+    position:absolute;
+    top:45%;
+    left:2%; 
+    transition: opacity 0.5s ease; 
+}
+#sem_GoRight{
+    opacity:1;
+    position:absolute;
+    top:45%;
+    right:2%;
+    transform: rotate(180deg);
+    transition: opacity 0.5s ease;
+}
+
+#sem_GoLeft.unavailable{
+    opacity: 0.5;
+}
+
+#sem_GoRight.unavailable{
+    opacity: 0.5;
+}
+
+#sem_GoLeft:hover{
+    filter: drop-shadow(0px 0px 5px #ededed);
+    transform: scale(1.1);
+}
+
+#sem_GoRight:hover{
+    filter: drop-shadow(0px 0px 5px #ededed);
+    transform: rotate(180deg) scale(1.1);
+}
+
+
 #canvas{
       position: absolute;
       top: 0;
