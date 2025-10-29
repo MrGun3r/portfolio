@@ -5,7 +5,10 @@
 html {
     width: 100%; height: 100%;
     box-sizing: border-box;
+}
 
+html.noscroll{
+    overflow: hidden;
 }
 body {
     margin: 0;
@@ -14,22 +17,33 @@ body {
     background-color: transparent;  
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
-    font-size: x-large;
+    font-size: larger;
     font-style: normal;
     height: 100%;
     width: 100%;
 }
-
+h1,h2{
+    margin-bottom:0%;
+}
 #topSection{
     color:white;
-    text-shadow: black;
-    height: 10%;
+    position:sticky;
+    top:0;
+    text-shadow: 2px 2px 2px #000000;
+    height: 12%;
     width: max-content;
     display:flex;
     gap:3rem;
-    margin-left: 5%;
+    padding-left: 5%;
     justify-content:left;
     align-items: center;
+    width:100%;
+    box-sizing: border-box;
+    z-index:2;
+    backdrop-filter: blur(4px);
+    
+    
+    border-bottom: 2px solid #2d2d2d86;
 }
 #topSectionButtons{
     display:flex;
@@ -49,12 +63,13 @@ button{
 
 #topSection button{
     background:linear-gradient(currentcolor 0 0)
-    bottom left/var(--underline-var,0%) 10% no-repeat;
+    bottom left/var(--underline-var,0%) 7% no-repeat;
     border:none;
     background-color:transparent;
     color:white;
     font-size: large;
     font-weight: 500;
+    text-shadow: 2px 2px 2px #000000;
     transition:0.5s;
 }
 button:hover{
@@ -85,7 +100,6 @@ button:hover{
 
 a,button{
     cursor: pointer;
-    z-index:5;
 }
 #home{
     
@@ -106,7 +120,7 @@ a,button{
     z-index: 1;
 }
 #socials{
-    z-index: 2;
+    z-index: 1;
     display:flex;
     justify-content: center;
     gap:2rem;
@@ -114,7 +128,7 @@ a,button{
 .socials_button{
     
     width:40px;
-    height:40px;
+    height:30px;
     transition: 0.1s ease;
     background-color: transparent;
     
@@ -131,6 +145,7 @@ a,button{
 
 .infoBox{
     display:flex;
+    flex-direction: column;
     width:100%;
     box-sizing: border-box;
     padding-left:4rem;
@@ -165,7 +180,32 @@ a,button{
     transition: opacity 0.5s ease;
 }
 
-
+#mobility_text{
+    padding:1rem;
+    width:70%;
+}
+#list_countries{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    padding-bottom: 2rem;
+}
+.mobility_country{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.country_info_text{
+    display:flex;
+    flex-direction: column;
+    gap:0rem;
+}
+#list_countries img{
+    width: 16rem;
+    height: 12rem;
+    border-radius: 3rem;
+    border: 4px solid #000000ab;
+}
 #mobility.fade-in{
     opacity: 1;
     z-index: 1;
@@ -178,8 +218,30 @@ a,button{
     opacity: 0;
     line-height:2rem;
     transition: opacity 0.5s ease;
+    gap: 1rem;
 }
 
+#civic img{
+    width: 18rem;
+    height: 14rem;
+    border-radius: 3rem;
+    border: 4px solid #000000ab;
+}
+
+
+#civic a{
+    color:#dbdbdb;
+    transition: 0.2s ease;
+}
+#civic a:hover{
+    color:#ad5b5b
+}
+
+.civil_info{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+}
 
 #civic.fade-in{
     opacity: 1;
@@ -193,9 +255,20 @@ a,button{
     opacity: 0;
     line-height:2rem;
     transition: opacity 0.5s ease;
+    gap:1rem;
 }
 
-
+#activities img{
+    width: 18rem;
+    height: 14rem;
+    border-radius: 3rem;
+    border: 4px solid #000000ab;
+}
+.activities_info{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+}
 #activities.fade-in{
     opacity: 1;
     z-index: 1;
@@ -303,7 +376,7 @@ a,button{
 
 
 #canvas{
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       z-index: -1; 
