@@ -100,9 +100,9 @@ function changePage(i){
    if(i == 0)   {doc_home.classList.add("fade-in");disableScroll()}
    if(i == 1)   {doc_EngCourse.classList.add("fade-in");disableScroll()}
    if(i == 2)   {doc_Mobility.classList.add("fade-in");enableScroll()}
-   if(i == 3)   {doc_civic.classList.add("fade-in");disableScroll()}
+   if(i == 3)   {doc_civic.classList.add("fade-in");enableScroll()}
    if(i == 4)   {doc_activities.classList.add("fade-in");enableScroll()}
-   if(i == 5)   {doc_career_dev.classList.add("fade-in");disableScroll()}
+   if(i == 5)   {doc_career_dev.classList.add("fade-in");enableScroll()}
    setTimeout(()=>{window.scrollTo({ top: 0, behavior: 'smooth' })},50);
 }
 
@@ -113,7 +113,7 @@ function resizeWindow(){
 }
 
 
-const no_dots = 60;
+const no_dots = 40;
 dots = [];
 const mouse = {
     x:0,
