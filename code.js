@@ -10,12 +10,16 @@ function getId(text){
 }
 
 
+
+
 const doc_home = getId("home");
 const doc_EngCourse = getId("engineering_course");
 const doc_Mobility = getId("mobility");
 const doc_civic = getId("civic");
 const doc_activities = getId("activities");
 const doc_career_dev = getId("career-dev");
+
+const htmlHeight = document.documentElement.clientHeight
 
 
 
@@ -27,7 +31,10 @@ for(i = 2;i<8;i++){
 }
 
 
-
+function gotoPresentation(){
+    window.scrollTo({ top:document.body.scrollHeight/2, behavior: 'smooth' })
+    
+}
 
 getId("sem_GoLeft").classList.add("unavailable");
 semesterShowing = 1;
@@ -43,6 +50,8 @@ function enableScroll(){
     document.documentElement.classList.remove("noscroll");
 
 }
+
+enableScroll()
 
 
 function moveSem(index){
@@ -97,12 +106,12 @@ function changePage(i){
    fadeoutEverything();
    
    moveDots();
-   if(i == 0)   {doc_home.classList.add("fade-in");disableScroll()}
-   if(i == 1)   {doc_EngCourse.classList.add("fade-in");disableScroll()}
-   if(i == 2)   {doc_Mobility.classList.add("fade-in");enableScroll()}
-   if(i == 3)   {doc_civic.classList.add("fade-in");enableScroll()}
-   if(i == 4)   {doc_activities.classList.add("fade-in");enableScroll()}
-   if(i == 5)   {doc_career_dev.classList.add("fade-in");enableScroll()}
+   if(i == 0)   {doc_home.classList.add("fade-in");enableScroll();}
+   if(i == 1)   {doc_EngCourse.classList.add("fade-in");disableScroll();}
+   if(i == 2)   {doc_Mobility.classList.add("fade-in");enableScroll();}
+   if(i == 3)   {doc_civic.classList.add("fade-in");enableScroll();}
+   if(i == 4)   {doc_activities.classList.add("fade-in");enableScroll();}
+   if(i == 5)   {doc_career_dev.classList.add("fade-in");enableScroll();}
    setTimeout(()=>{window.scrollTo({ top: 0, behavior: 'smooth' })},50);
 }
 
